@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.solomon.rest.model.SolomonRecord;
 
-@Path("/updateModel/")
+@Path("/updateModel")
 public class UpdateModel {
 	@GET
 	@Produces("application/xml")
@@ -83,10 +83,9 @@ public class UpdateModel {
 	@GET
 	@Path("/verify")
 	@Produces(MediaType.TEXT_PLAIN)
-	public Response verifyRESTService(InputStream incomingData) {
-		String result = "RESTService Successfully started..";
+	public String verifyRESTService() {
  
 		// return HTTP response 200 in case of success
-		return Response.status(200).entity(result).build();
+		return "All ok bhosadike" ;
 	}
 }
